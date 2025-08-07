@@ -1,0 +1,80 @@
+name: taiz_water_tracker
+description: "تطبيق لتتبع استهلاك وجدولة المياه في تعز"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  # ✅ --- يجب إضافة هذا الجزء لدعم اللغة العربية ---
+  flutter_localizations:
+    sdk: flutter
+
+  # الأيقونات الأساسية
+  cupertino_icons: ^1.0.8
+
+  # لإدارة قواعد البيانات المحلية وتخزين البيانات
+  sqflite: ^2.3.3+1
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.3
+
+  # للتعامل مع الشبكة وطلبات HTTP (لجلب بيانات مستقبلية)
+  http: ^1.2.1
+
+  # لإنشاء الرسوم البيانية
+  fl_chart: ^0.68.0
+
+  # لإدارة التواريخ والأرقام وتنسيقها
+  intl: ^0.19.0
+
+  # لإظهار الإشعارات المحلية (تنبيهات مواعيد الضخ)
+  flutter_local_notifications: ^17.1.2
+  
+  # لدعم قواعد البيانات على الكمبيوتر
+  sqflite_common_ffi: ^2.3.3
+
+  # لفتح الروابط الخارجية (مثل تطبيق الاتصال)
+  url_launcher: ^6.2.6
+  marquee: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # لتغيير أيقونة التطبيق بسهولة
+  flutter_launcher_icons: "^0.13.1"
+  
+  # لتحسين جودة الكود واكتشاف الأخطاء
+  flutter_lints: ^4.0.0
+
+  # لإجراء اختبارات التكامل (UI tests)
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # تعريف مجلدات الأصول لجعلها متاحة داخل التطبيق
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+
+  # تعريف الخطوط العربية المخصصة
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+          
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/Tajawal-Bold.ttf
+          weight: 700
